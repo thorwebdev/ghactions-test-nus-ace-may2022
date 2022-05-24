@@ -35,4 +35,4 @@ jobs:
         df -h
         which wget
         which curl
-        curl -X POST -H "Content-Type: application/json" -d '{"value1":"hello DevOps students – I hope this is inspiring!","value2":"","value3":""}' https://maker.ifttt.com/trigger/triggerdevops/with/key/${{ secrets.IFTTT_KEY }}
+        curl -X POST 'https://zdtdtxajzydjqzuktnqx.functions.supabase.co/telegram-bot?secret=${{ secrets.FUNCTION_SECRET }}' -H "Content-Type: application/json" -d '{"update_id":831767500,"message":{"message_id":110,"from":{"id":1027371062,"is_bot":false,"first_name":"Thor ⚡️","last_name":"@thorwebdev","username":"thorwebdev","language_code":"en"},"chat":{"id":1027371062,"first_name":"Thor ⚡️","last_name":"@thorwebdev","username":"thorwebdev","type":"private"},"date":1653355484,"text":"/ping","entities":[{"offset":0,"length":6,"type":"bot_command"}]}}'
